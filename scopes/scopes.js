@@ -38,8 +38,41 @@ function useState(param) {
     const sum1 = param + 1;
     return [param, sum1];
 }
+const myjson = JSON.stringify({ name: "luigi", age: "25" });
+console.log(myjson);
 const [teste, setTeste] = useState(0);
 console.log(teste);
 console.log(setTeste);
+const iftest = 3;
+if (iftest > 4) {
+    console.log("não deveria mostrar isso");
+}
+else if (iftest > 2) {
+    console.log("deveria mostrar isso");
+}
+else if (iftest > 1) {
+    console.log("não deveria mostrar isso");
+}
+const objectForSpreading = { surname: "Smith", age: 25 };
+const objectWithSpreadProp = { name: "Ana", ...objectForSpreading };
+console.log(objectWithSpreadProp);
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+const randomNum = getRandomIntInclusive(0, 2);
+const myColor = ["red", "green", "blue"];
+switch (myColor[randomNum]) {
+    case "red":
+        console.log("vermelho");
+        break;
+    case "green":
+        console.log("verde");
+        break;
+    case "blue":
+        console.log("azul");
+        break;
+}
 export {};
 //# sourceMappingURL=scopes.js.map
